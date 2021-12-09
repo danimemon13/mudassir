@@ -55,3 +55,8 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route["login"] = 'home/login';
 $route["dashboard"] = 'home/dashboard';
+
+$route["voucher/cash-voucher"] = 'home/cash_voucher';
+
+$route["voucher/bank-voucher"] = 'home/bank_voucher';
+$route["voucher/contra-voucher"] = 'home/contra_voucher';

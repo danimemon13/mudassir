@@ -102,24 +102,24 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-12">
                                 <div class="card rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Add New Investor</h3></div>
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Add New Cash Voucher</h3></div>
                                     <div class="card-body">
                                         <form id="loginform">
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputEmail" name="name" type="text" placeholder="Enter Your User Name or Number" />
-                                                <label for="inputEmail">Full Name</label>
+                                                <input class="form-control" id="inputEmail" name="login_name" type="text" placeholder="Enter Your User Name or Number" />
+                                                <label for="inputEmail">Enter Date</label>
                                             </div>
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputEmail" name="nic" type="text" placeholder="Enter Your User Name or Number" />
-                                                <label for="inputEmail">N.I.C Number</label>
+                                                <input class="form-control" id="inputEmail" name="login_name" type="text" placeholder="Enter Your User Name or Number" />
+                                                <label for="inputEmail">Amount</label>
                                             </div>
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputEmail" name="number" type="text" placeholder="Enter Your User Name or Number" />
-                                                <label for="inputEmail">User Name / Number</label>
+                                                <input class="form-control" id="inputEmail" name="login_name" type="text" placeholder="Enter Your User Name or Number" />
+                                                <label for="inputEmail">Select Account</label>
                                             </div>
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="inputPassword" type="password" placeholder="Password" name="password" />
-                                                <label for="inputPassword">Password</label>
+                                                <label for="inputPassword">Select Type (Debit/Credit)</label>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                                                 <button class="btn btn-primary" type="submit">Save</button>
@@ -152,30 +152,5 @@
         <script src="<?=base_url()?>assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
         <script src="<?=base_url()?>js/datatables-simple-demo.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
-            $("#loginform").submit(function(e){
-                e.preventDefault();
-                var data = $("#loginform").serializeArray();
-                $.ajax({
-                    url:'<?=base_url()?>investors/investor_process',
-                    type:'post',
-                    data:data,
-                    success:function(response){
-                        /*if(response=='success'){
-                            window.location = '<?=base_url()?>home';
-                        }
-                        else{
-                            alert("Invalid User Name and Password");
-                        }*/
-                        alert(response);
-                        console.log(response);
-                    }
-                });
-            });
-            $(function(){
-
-            })
-        </script>
     </body>
 </html>

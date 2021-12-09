@@ -53,5 +53,14 @@ class Home extends CI_Controller {
     public function dashboard(){
     	$this->load->view("dashboard");
     }
+    public function cash_voucher(){
+        $this->load->view("voucher/cash");
+    }
+    public function bank_voucher(){
+        $this->load->view("voucher/bank");
+    }
+    public function contra_voucher(){
+        $this->load->view("voucher/contra");
+    }
 }
 ?>

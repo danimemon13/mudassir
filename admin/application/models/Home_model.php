@@ -9,4 +9,11 @@ class Home_model extends CI_Model
 		$query = $this->db->get();
 		return $query->result_array(); 
 	}
+
+	public function investors(){
+		$this->db->select("*");
+		$this->db->from("investors");
+		$query = $this->db->get();
+		return $query->result_array();
+	}
 }
